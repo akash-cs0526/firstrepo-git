@@ -18,4 +18,5 @@ RUN chown -R apache:apache /var/www/html
 EXPOSE 80
 
 # Run Apache in foregroud
+
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
