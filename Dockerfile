@@ -4,7 +4,7 @@ LABEL maintainer="parttimewarrior34@gmail.com"
 
 # Install required packages
 RUN dnf -y update && \
-    dnf -y install httpd unzip curl && \
+    dnf -y install httpd && \
     dnf clean all
 
 # Apache document root
