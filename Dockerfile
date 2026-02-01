@@ -10,7 +10,7 @@ RUN yum -y update && \
 # Apache document root
 WORKDIR /var/www/html
 
-COPY photogenic/ /var/www/html/
+COPY 2151_winter_gallery/ /var/www/html/
 
 RUN chown -R apache:apache /var/www/html
 
