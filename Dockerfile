@@ -10,12 +10,9 @@ RUN yum -y update && \
 # Apache document root
 WORKDIR /var/www/html
 
-RUN curl -L -o photogenic.zip \
-    https://freehtml5.co/photogenic-free-bootstrap-portfolio-website-template/
+COPY photogenic/ /var/www/html/
 
-RUN unzip photogenic.zip && \
-    cp -rvf photogenic/* . && \
-    rm -rf photogenic photogenic.zip
+RUN chown -R apache:apache /var/www/html
 
 # Expose Apache port
 EXPOSE 80
