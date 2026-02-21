@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: westeros
+spec:
+  replicas: 2
+  selector:
+    matchLabels: 
+      app: lanister
+  template:
+    metadata:
+      labels:
+        app: lanister
+    spec:
+      containers:
+      - name: tywin
+        image: akash79720/pipeline-demo
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
