@@ -3,5 +3,9 @@
   tasks:
     - name: create new deployment named westeros
       command: kubectl create -f /home/ubuntu/deployment.yaml
+      become: yes
+      become_user: ubuntu
     - name: create new svc named kingslanding
       command: kubectl create -f /home/ubuntu/svc.yaml
+      become: yes
+      become_user: ubuntu
