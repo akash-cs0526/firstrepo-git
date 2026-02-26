@@ -7,9 +7,9 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-    matchLabels:
-      app: lanister
+    app: lanister
   ports:
     - port: 8080
       targetPort: 80
       nodePort: 31200
+
